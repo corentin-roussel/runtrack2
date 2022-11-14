@@ -1,0 +1,16 @@
+table {
+    width: 10px;
+    height: auto;
+}
+
+thead {
+    font-size: 30px;
+}
+
+tbody {
+    font-size: 20px;
+}
+
+td {
+    padding: 10px;
+}
