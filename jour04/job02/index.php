@@ -28,22 +28,24 @@
         </article>
 
         <table>
-            <tr>
-                <th>Argument</th>
-                <th>Valeur</th>
-            </tr>
-            <tr>
-                <td>Nom</td>
-                <td><?php if (isset($_GET['nom'])) {
-                    echo $_GET['nom'];
-                } ?></td>
-            </tr>
-            <tr>
-                <td>Prénom</td>
-                <td><?php if (isset($_GET['prenom'])) {
-                    echo $_GET['prenom'];
-                }?></td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Argument</th>
+                    <th>Valeur</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    foreach($_GET as $key => $values) { 
+                        if($values == TRUE) { 
+                            echo"<tr>
+                                    <td>$key</td>
+                                    <td>$values</td>
+                                </tr>";
+                        }
+                    }
+                ?>
+            </tbody>
         </table>
     </main>
 </body>
