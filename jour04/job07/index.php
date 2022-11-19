@@ -23,7 +23,7 @@
 if ($_GET) {
     for($i = 0; $i <= $_GET['hauteur'] ; $i++) {
         for($space = 0; $space <= $_GET['hauteur'] - $i; $space++) {
-            echo " ";
+            echo "&nbsp";
         }
         echo "/";
         for($tiret = 0; $tiret <= ($i * 2 - 1); $tiret++) {
@@ -33,16 +33,17 @@ if ($_GET) {
     
     }
 
-    for($r = 0; $r < $_GET['hauteur']; $r++) {
+    for($r = 0; $r <= $_GET['hauteur'] ; $r++) {
         echo "|";
-        if($i == $_GET['hauteur']) {
-            for($t = 0; $t <= $_GET['largeur']; $t++) {
+
+        if($r == $_GET['hauteur']) {
+            for($t = 0; $t <= $_GET['largeur'] * 2 ; $t++) {
                 echo "_";
             }
         }
         else {
-            for($t = 0; $t <= $_GET['largeur']; $t++) {
-                echo $_GET['largeur'] * 2;
+            for($t = 0; $t <= $_GET['largeur'] * 2 ; $t++) {
+                echo "&nbsp";
             }
         }
     
