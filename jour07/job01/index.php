@@ -1,8 +1,7 @@
 <?php
-function hello($arg1) {
-    echo "$arg1";
+function hello() {
+    echo "Hello LaPlateforme!";
 }
-$a = "Hello LaPlateforme_";
 
-hello($a)
+hello()
 ?>
