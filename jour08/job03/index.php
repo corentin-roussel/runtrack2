@@ -1,16 +1,16 @@
 <?php
 
-session_start();
+session_start(); //démarrage de la session
 
 
 
 
-if(isset($_POST['submit'])) {
-    $_SESSION['user'][] = $_POST['prenom'];
+if(isset($_POST['submit'])) { //si $_POST['submit'] existe rentre dans la condition 
+    $_SESSION['user'][] = $_POST['prenom']; //$_POST['prenom'] est stocker dans un tableau dans la varibale $_SESSION['user]
 }
 
-if(isset($_POST['reset'])) {
-    unset($_SESSION['user']);
+if(isset($_POST['reset'])) { // si $_POST['reset'] existe rentre dans la condition
+    unset($_SESSION['user']); //et unset $_['session user']
 }
 
 
@@ -25,9 +25,9 @@ if(isset($_POST['reset'])) {
 
 
 <?php
-if(isset($_SESSION['user'])) {
-    foreach($_SESSION['user'] as $values){ 
-    echo '<br>'. $values . '</br>';
+if(isset($_SESSION['user'])) { //si $_SESSION['user'] existe rentre dans la conditions
+    foreach($_SESSION['user'] as $values){ //pour chaque value dans $_SESSION['user']
+    echo '<br>'. $values . '</br>'; //afficher values avec un saut de ligne
     }
 }
 ?>
